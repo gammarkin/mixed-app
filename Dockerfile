@@ -1,9 +1,10 @@
 FROM node:20-alpine
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --production
+RUN npm install
 COPY . .
-RUN npx expo-cli build:web
-EXPOSE 8080
+RUN npx expo export:web
 RUN npm install -g serve
-CMD ["serve", "-s", "web-build", "-l", "8080"]
+ENV PORT=8080
+EXPOSE 8080
+CMD ["serve", "-s", "dist", "-l", "8080"]
