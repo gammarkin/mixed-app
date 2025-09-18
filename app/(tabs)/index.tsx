@@ -39,6 +39,8 @@ export default function TodoCrudScreen() {
 			.then((res) => res.json())
 			.then(setTodos)
 			.catch(() => setTodos([]));
+
+		fetch('https://mixed-server-1022365474768.southamerica-east1.run.app/').then(data => console.log(data))
 	}, []);
 
 	const handleSubmit = () => {
