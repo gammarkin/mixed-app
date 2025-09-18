@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import tw from 'tailwind-react-native-classnames';
 
-const API_URL = 'http://localhost:8080/todos';
+const API_URL = 'https://mixed-server-1022365474768.southamerica-east1.run.app/todos';
 
 type Todo = {
 	id: number;
